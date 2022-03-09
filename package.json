@@ -1,13 +1,13 @@
 {
-  "name": "electron-forge-typescript-webpack",
-  "productName": "electron-forge-typescript-webpack",
+  "name": "roam-custom-electron",
+  "productName": "RoamCustomElectron",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "Simple wrapper of Roam on Electron",
   "main": ".webpack/main",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
-    "make": "electron-forge make",
+    "make": "electron-forge make --arch=x64,arm64",
     "publish": "electron-forge publish",
     "lint": "eslint --ext .ts,.tsx ."
   },
@@ -19,7 +19,9 @@
   "license": "MIT",
   "config": {
     "forge": {
-      "packagerConfig": {},
+      "packagerConfig": {
+        "icon": "assets/RoamResearch.icns"
+      },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
