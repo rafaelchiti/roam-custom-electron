@@ -1,7 +1,7 @@
 {
   "name": "roam-custom-electron",
   "productName": "RoamCustomElectron",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple wrapper of Roam on Electron",
   "main": ".webpack/main",
   "scripts": {
