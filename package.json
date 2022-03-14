@@ -20,7 +20,8 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "icon": "assets/RoamResearch.icns"
+        "icon": "assets/RoamResearch.icns",
+        "executableName": "roam-custom-electron"
       },
       "makers": [
         {
@@ -42,6 +43,18 @@
         {
           "name": "@electron-forge/maker-rpm",
           "config": {}
+        }
+      ],
+      "publishers": [
+        {
+          "name": "@electron-forge/publisher-github",
+          "config": {
+            "repository": {
+              "owner": "rafaelchiti",
+              "name": "roam-custom-electron"
+            },
+            "draft": true
+          }
         }
       ],
       "plugins": [
@@ -71,6 +84,7 @@
     "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
     "@electron-forge/maker-zip": "^6.0.0-beta.63",
     "@electron-forge/plugin-webpack": "6.0.0-beta.63",
+    "@electron-forge/publisher-github": "^6.0.0-beta.63",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.13",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
