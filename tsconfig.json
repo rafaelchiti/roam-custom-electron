@@ -1,19 +1,17 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "module": "commonjs",
+    "target": "esnext",
+    "lib": ["DOM", "DOM.Iterable", "esnext"],
+    "types": ["vite/client"],
     "skipLibCheck": true,
-    "esModuleInterop": true,
-    "jsx": "react",
-    "noImplicitAny": true,
-    "sourceMap": true,
-    "baseUrl": ".",
-    "outDir": "dist",
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
     "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "paths": {
-      "*": ["node_modules/*"]
-    }
-  },
-  "include": ["src/**/*"]
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react"
+  }
 }
